@@ -1,0 +1,241 @@
+\hypertarget{classDCEL}{}\doxysection{DCEL Class Reference}
+\label{classDCEL}\index{DCEL@{DCEL}}
+
+
+\mbox{\hyperlink{classDCEL}{DCEL}} class or the doubly connected edge list class it is used to denote all the shapes, edges and vertices present in the 2D plane.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classDCEL_a9a1c0d70e6283544c15d0eeda04a3e9c}{inside}} (vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ polygon, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$point)
+\begin{DoxyCompactList}\small\item\em checks if given vertex/point is inside a polygon/face for a given convex polygon, a point lies inside the polygon if the cross product of every directed edge and vector from start vertex of that edge to the point all have the same sign. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDCEL_aa5062d158e5469dedf39163276a1e0ac}{notch}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$e1, \mbox{\hyperlink{classEdge}{Edge}} $\ast$e2)
+\begin{DoxyCompactList}\small\item\em checks if given two edges they form a notch or reflex angle. it works by calculating the cross product of the two directed edges. if it is positive/pointing out of the plane that means it is a reflex angle else it is not \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDCEL_a543e3887445321dccf2d2a17dd0b8583}{count\+Edges}} (\mbox{\hyperlink{classFace}{Face}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em counts the number of edges given a polygon/face iterates over all edges starting with the adjacent edge of the face until it reaches back the same \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_ac08392957b68144a2fe9e22428eda0b4}{boundingbox}} (\mbox{\hyperlink{classVertex}{Vertex}} \&minlimits, \mbox{\hyperlink{classVertex}{Vertex}} \&maxlimits, vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a6339be2488749b653dc02bab4c1e5655}{vertices}})
+\begin{DoxyCompactList}\small\item\em calculates the bounding box given a set of vertices iterates through each of the vertices and calculates the maximum and minimum x and y coordinates to create a box that tightly encapsulates all these vertices \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_af02785c7de9e650936558d6de96cb154}{split}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$v1, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$v2, \mbox{\hyperlink{classFace}{Face}} $\ast$polygon)
+\begin{DoxyCompactList}\small\item\em Splits a polygon by adding a new pair of edges (edge and its twin) between two vertices and returns the edges of the resulting split polygon. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_ac8291a06fbe0b950832480d4eda36e51}{dissolveedge}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$dummyedge, \mbox{\hyperlink{classFace}{Face}} $\ast$polygon)
+\begin{DoxyCompactList}\small\item\em Dissolves an edge in a \mbox{\hyperlink{classDCEL}{DCEL}}. This function dissolves an edge in a \mbox{\hyperlink{classDCEL}{DCEL}} data structure by creating a new polygon with the same adjacent edges as the old polygon on the left side of the dissolved edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_a4bec4a62e1bd500fba8d22390474c715}{merger}} ()
+\begin{DoxyCompactList}\small\item\em Merges polygons by deleting edges which do not lead to non-\/convex polygons. It iterates through all the new edges created and checks if removing it causes a notch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDCEL_a80febec390821d24de86028103611d84}{mp1}} ()
+\begin{DoxyCompactList}\small\item\em This mp1 algorithm performs the decomposition of a simple polygon into convex polygons as per the MP1 algorithm described in the research paper\+: \char`\"{}\+Fernández, J., Cánovas, L., \& Pelegrı́n, B. (2000). Algorithms for the decomposition of a polygon into convex polygons. European Journal of Operational Research, 121(2), 330-\/342\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}{edges}}
+\begin{DoxyCompactList}\small\item\em denotes a vector containing all the edges in the \mbox{\hyperlink{classDCEL}{DCEL}} \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a6339be2488749b653dc02bab4c1e5655}{vertices}}
+\begin{DoxyCompactList}\small\item\em denotes a vector of all the vertices in the \mbox{\hyperlink{classDCEL}{DCEL}} \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classFace}{Face}} $\ast$ $>$ \mbox{\hyperlink{classDCEL_a0dfce903b2956a78c6aa143a2226365f}{faces}}
+\begin{DoxyCompactList}\small\item\em denotes a vector of all the faces in the \mbox{\hyperlink{classDCEL}{DCEL}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDCEL}{DCEL}} class or the doubly connected edge list class it is used to denote all the shapes, edges and vertices present in the 2D plane. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDCEL_ac08392957b68144a2fe9e22428eda0b4}\label{classDCEL_ac08392957b68144a2fe9e22428eda0b4}} 
+\index{DCEL@{DCEL}!boundingbox@{boundingbox}}
+\index{boundingbox@{boundingbox}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{boundingbox()}{boundingbox()}}
+{\footnotesize\ttfamily void DCEL\+::boundingbox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} \&}]{minlimits,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}} \&}]{maxlimits,  }\item[{vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$}]{vertices }\end{DoxyParamCaption})}
+
+
+
+calculates the bounding box given a set of vertices iterates through each of the vertices and calculates the maximum and minimum x and y coordinates to create a box that tightly encapsulates all these vertices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minlimits} & max x and max y coordinates are stored here and returned \\
+\hline
+{\em maxlimits} & min x and min y coordinates are stored here and returned \\
+\hline
+{\em vertices} & vector of vertices passed as input \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_a543e3887445321dccf2d2a17dd0b8583}\label{classDCEL_a543e3887445321dccf2d2a17dd0b8583}} 
+\index{DCEL@{DCEL}!countEdges@{countEdges}}
+\index{countEdges@{countEdges}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{countEdges()}{countEdges()}}
+{\footnotesize\ttfamily int DCEL\+::count\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFace}{Face}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+counts the number of edges given a polygon/face iterates over all edges starting with the adjacent edge of the face until it reaches back the same 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & face/polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int number of edges in polygon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_ac8291a06fbe0b950832480d4eda36e51}\label{classDCEL_ac8291a06fbe0b950832480d4eda36e51}} 
+\index{DCEL@{DCEL}!dissolveedge@{dissolveedge}}
+\index{dissolveedge@{dissolveedge}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{dissolveedge()}{dissolveedge()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ DCEL\+::dissolveedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{dummyedge,  }\item[{\mbox{\hyperlink{classFace}{Face}} $\ast$}]{polygon }\end{DoxyParamCaption})}
+
+
+
+Dissolves an edge in a \mbox{\hyperlink{classDCEL}{DCEL}}. This function dissolves an edge in a \mbox{\hyperlink{classDCEL}{DCEL}} data structure by creating a new polygon with the same adjacent edges as the old polygon on the left side of the dissolved edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dummyedge} & The dummy edge to be dissolved. \\
+\hline
+{\em polygon} & The polygon containing the dummy edge to be dissolved. \\
+\hline
+{\em dcel} & The \mbox{\hyperlink{classDCEL}{DCEL}} data structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of edges representing the new polygon created after dissolving the edge. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_a9a1c0d70e6283544c15d0eeda04a3e9c}\label{classDCEL_a9a1c0d70e6283544c15d0eeda04a3e9c}} 
+\index{DCEL@{DCEL}!inside@{inside}}
+\index{inside@{inside}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{inside()}{inside()}}
+{\footnotesize\ttfamily bool DCEL\+::inside (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$}]{polygon,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{point }\end{DoxyParamCaption})}
+
+
+
+checks if given vertex/point is inside a polygon/face for a given convex polygon, a point lies inside the polygon if the cross product of every directed edge and vector from start vertex of that edge to the point all have the same sign. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em polygon} & is of type \mbox{\hyperlink{classFace}{Face}} \\
+\hline
+{\em point} & is of type \mbox{\hyperlink{classVertex}{Vertex}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true returned when point is inside polygon 
+
+false returned when point is outside polygon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_a4bec4a62e1bd500fba8d22390474c715}\label{classDCEL_a4bec4a62e1bd500fba8d22390474c715}} 
+\index{DCEL@{DCEL}!merger@{merger}}
+\index{merger@{merger}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{merger()}{merger()}}
+{\footnotesize\ttfamily void DCEL\+::merger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Merges polygons by deleting edges which do not lead to non-\/convex polygons. It iterates through all the new edges created and checks if removing it causes a notch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dcel} & A pointer to the \mbox{\hyperlink{classDCEL}{DCEL}} data structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDCEL_a80febec390821d24de86028103611d84}\label{classDCEL_a80febec390821d24de86028103611d84}} 
+\index{DCEL@{DCEL}!mp1@{mp1}}
+\index{mp1@{mp1}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{mp1()}{mp1()}}
+{\footnotesize\ttfamily void DCEL\+::mp1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This mp1 algorithm performs the decomposition of a simple polygon into convex polygons as per the MP1 algorithm described in the research paper\+: \char`\"{}\+Fernández, J., Cánovas, L., \& Pelegrı́n, B. (2000). Algorithms for the decomposition of a polygon into convex polygons. European Journal of Operational Research, 121(2), 330-\/342\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dcel} & A pointer to the \mbox{\hyperlink{classDCEL}{DCEL}} data structure representing the polygonal subdivision. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_aa5062d158e5469dedf39163276a1e0ac}\label{classDCEL_aa5062d158e5469dedf39163276a1e0ac}} 
+\index{DCEL@{DCEL}!notch@{notch}}
+\index{notch@{notch}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{notch()}{notch()}}
+{\footnotesize\ttfamily bool DCEL\+::notch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{e1,  }\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{e2 }\end{DoxyParamCaption})}
+
+
+
+checks if given two edges they form a notch or reflex angle. it works by calculating the cross product of the two directed edges. if it is positive/pointing out of the plane that means it is a reflex angle else it is not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e1} & edge 1 \\
+\hline
+{\em e2} & edge 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is a notch 
+
+false if it is not a notch 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDCEL_af02785c7de9e650936558d6de96cb154}\label{classDCEL_af02785c7de9e650936558d6de96cb154}} 
+\index{DCEL@{DCEL}!split@{split}}
+\index{split@{split}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ DCEL\+::split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{v1,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{v2,  }\item[{\mbox{\hyperlink{classFace}{Face}} $\ast$}]{polygon }\end{DoxyParamCaption})}
+
+
+
+Splits a polygon by adding a new pair of edges (edge and its twin) between two vertices and returns the edges of the resulting split polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & The first vertex of the edge to be added. \\
+\hline
+{\em v2} & The second vertex of the edge to be added. \\
+\hline
+{\em polygon} & The polygon to be split. \\
+\hline
+{\em dcel} & A pointer to the \mbox{\hyperlink{classDCEL}{DCEL}} data structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of pointers to the edges of the split polygon. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}\label{classDCEL_a36c4fc41ad86cc665a1a4001188c8e38}} 
+\index{DCEL@{DCEL}!edges@{edges}}
+\index{edges@{edges}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classEdge}{Edge}} $\ast$$>$ DCEL\+::edges}
+
+
+
+denotes a vector containing all the edges in the \mbox{\hyperlink{classDCEL}{DCEL}} 
+
+\mbox{\Hypertarget{classDCEL_a0dfce903b2956a78c6aa143a2226365f}\label{classDCEL_a0dfce903b2956a78c6aa143a2226365f}} 
+\index{DCEL@{DCEL}!faces@{faces}}
+\index{faces@{faces}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classFace}{Face}} $\ast$$>$ DCEL\+::faces}
+
+
+
+denotes a vector of all the faces in the \mbox{\hyperlink{classDCEL}{DCEL}} 
+
+\mbox{\Hypertarget{classDCEL_a6339be2488749b653dc02bab4c1e5655}\label{classDCEL_a6339be2488749b653dc02bab4c1e5655}} 
+\index{DCEL@{DCEL}!vertices@{vertices}}
+\index{vertices@{vertices}!DCEL@{DCEL}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classVertex}{Vertex}} $\ast$$>$ DCEL\+::vertices}
+
+
+
+denotes a vector of all the vertices in the \mbox{\hyperlink{classDCEL}{DCEL}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dcel1.\+cpp\end{DoxyCompactItemize}

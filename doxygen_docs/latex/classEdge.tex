@@ -1,0 +1,203 @@
+\hypertarget{classEdge}{}\doxysection{Edge Class Reference}
+\label{classEdge}\index{Edge@{Edge}}
+
+
+\mbox{\hyperlink{classEdge}{Edge}} class for denoting edges in our 2D plane.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEdge_a3106b11d60125009dbf7a738ce540fdf}{Edge}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEdge}{Edge}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEdge_a39a530a5279d2e26b9090ed6763bd0ec}{Edge}} (\mbox{\hyperlink{classVertex}{Vertex}} $\ast$st, \mbox{\hyperlink{classVertex}{Vertex}} $\ast$en)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEdge}{Edge}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEdge_aa5db63b5c1e11d32a5e9fdf9131eda29}{settwin}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$tw)
+\begin{DoxyCompactList}\small\item\em sets the twin edge \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEdge_aca981d005a44d379ea16cc14617e7014}{setnext}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$n)
+\begin{DoxyCompactList}\small\item\em sets the next edge \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEdge_aadd69d8825828bc392049205768518bf}{setprev}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em sets the previous edge \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEdge_ab2fdd335321f8cf23c1c43b7330ab407}{setface}} (\mbox{\hyperlink{classFace}{Face}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em sets the right face \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classEdge_a1c8d8b3a5d2320d3b0884f31190784f4}{start}}
+\begin{DoxyCompactList}\small\item\em denotes the starting vertex of a directed edge \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertex}{Vertex}} $\ast$ \mbox{\hyperlink{classEdge_a02667c57d9ef870edaa0a2512058d4cb}{end}}
+\begin{DoxyCompactList}\small\item\em denotes ending vertex of directed edge \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEdge}{Edge}} $\ast$ \mbox{\hyperlink{classEdge_a4b1c131507ae70dd5fef2dc27d1218fc}{twin}}
+\begin{DoxyCompactList}\small\item\em denotes twin of edge which is basically an edge joining the same vertices in the opposite direction \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEdge}{Edge}} $\ast$ \mbox{\hyperlink{classEdge_a93fd30fc006838e2767db3070e7af4fa}{next}}
+\begin{DoxyCompactList}\small\item\em denotes the next directed edge in the same polygon \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEdge}{Edge}} $\ast$ \mbox{\hyperlink{classEdge_aa8c1ff2e0908416ae7611f95622c9acf}{prev}}
+\begin{DoxyCompactList}\small\item\em denotes the previous directed edge in the same polygon \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFace}{Face}} $\ast$ \mbox{\hyperlink{classEdge_ade46f1cf42a6e36313430a3614c7fa8f}{rightface}}
+\begin{DoxyCompactList}\small\item\em denotes the face to which the directed edge belongs in this case the face to the right of the edge \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classEdge}{Edge}} class for denoting edges in our 2D plane. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEdge_a3106b11d60125009dbf7a738ce540fdf}\label{classEdge_a3106b11d60125009dbf7a738ce540fdf}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEdge_1_1Edge}{Edge\+::\+Edge}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classEdge}{Edge}} object. 
+
+\mbox{\Hypertarget{classEdge_a39a530a5279d2e26b9090ed6763bd0ec}\label{classEdge_a39a530a5279d2e26b9090ed6763bd0ec}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEdge_1_1Edge}{Edge\+::\+Edge}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{st,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}} $\ast$}]{en }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classEdge}{Edge}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em st} & start vertex \\
+\hline
+{\em en} & end vertex \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEdge_ab2fdd335321f8cf23c1c43b7330ab407}\label{classEdge_ab2fdd335321f8cf23c1c43b7330ab407}} 
+\index{Edge@{Edge}!setface@{setface}}
+\index{setface@{setface}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setface()}{setface()}}
+{\footnotesize\ttfamily void Edge\+::setface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFace}{Face}} $\ast$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the right face 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & right face \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEdge_aca981d005a44d379ea16cc14617e7014}\label{classEdge_aca981d005a44d379ea16cc14617e7014}} 
+\index{Edge@{Edge}!setnext@{setnext}}
+\index{setnext@{setnext}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setnext()}{setnext()}}
+{\footnotesize\ttfamily void Edge\+::setnext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the next edge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & next edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEdge_aadd69d8825828bc392049205768518bf}\label{classEdge_aadd69d8825828bc392049205768518bf}} 
+\index{Edge@{Edge}!setprev@{setprev}}
+\index{setprev@{setprev}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setprev()}{setprev()}}
+{\footnotesize\ttfamily void Edge\+::setprev (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the previous edge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & previous edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEdge_aa5db63b5c1e11d32a5e9fdf9131eda29}\label{classEdge_aa5db63b5c1e11d32a5e9fdf9131eda29}} 
+\index{Edge@{Edge}!settwin@{settwin}}
+\index{settwin@{settwin}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{settwin()}{settwin()}}
+{\footnotesize\ttfamily void Edge\+::settwin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{tw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the twin edge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tw} & twin edge \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEdge_a02667c57d9ef870edaa0a2512058d4cb}\label{classEdge_a02667c57d9ef870edaa0a2512058d4cb}} 
+\index{Edge@{Edge}!end@{end}}
+\index{end@{end}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}}$\ast$ Edge\+::end}
+
+
+
+denotes ending vertex of directed edge 
+
+\mbox{\Hypertarget{classEdge_a93fd30fc006838e2767db3070e7af4fa}\label{classEdge_a93fd30fc006838e2767db3070e7af4fa}} 
+\index{Edge@{Edge}!next@{next}}
+\index{next@{next}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEdge}{Edge}}$\ast$ Edge\+::next}
+
+
+
+denotes the next directed edge in the same polygon 
+
+\mbox{\Hypertarget{classEdge_aa8c1ff2e0908416ae7611f95622c9acf}\label{classEdge_aa8c1ff2e0908416ae7611f95622c9acf}} 
+\index{Edge@{Edge}!prev@{prev}}
+\index{prev@{prev}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEdge}{Edge}}$\ast$ Edge\+::prev}
+
+
+
+denotes the previous directed edge in the same polygon 
+
+\mbox{\Hypertarget{classEdge_ade46f1cf42a6e36313430a3614c7fa8f}\label{classEdge_ade46f1cf42a6e36313430a3614c7fa8f}} 
+\index{Edge@{Edge}!rightface@{rightface}}
+\index{rightface@{rightface}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{rightface}{rightface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFace}{Face}}$\ast$ Edge\+::rightface}
+
+
+
+denotes the face to which the directed edge belongs in this case the face to the right of the edge 
+
+\mbox{\Hypertarget{classEdge_a1c8d8b3a5d2320d3b0884f31190784f4}\label{classEdge_a1c8d8b3a5d2320d3b0884f31190784f4}} 
+\index{Edge@{Edge}!start@{start}}
+\index{start@{start}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}}$\ast$ Edge\+::start}
+
+
+
+denotes the starting vertex of a directed edge 
+
+\mbox{\Hypertarget{classEdge_a4b1c131507ae70dd5fef2dc27d1218fc}\label{classEdge_a4b1c131507ae70dd5fef2dc27d1218fc}} 
+\index{Edge@{Edge}!twin@{twin}}
+\index{twin@{twin}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{twin}{twin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEdge}{Edge}}$\ast$ Edge\+::twin}
+
+
+
+denotes twin of edge which is basically an edge joining the same vertices in the opposite direction 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+dcel1.\+cpp\end{DoxyCompactItemize}
