@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-#   Randomly generate points in a [0,1) x [0,1) square and write to test.txt
+#   Randomly generate points in a [0,1) x [0,1) square and write to generate_test1.txt
 # -----------------------------------------------------------------------------
 
 import os
