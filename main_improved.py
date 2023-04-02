@@ -119,6 +119,7 @@ if __name__ == "__main__":
     file1.close()
     file2.close()
     
+    # system call to the main c++ file
     s = "g++ dcel1.cpp -o tempans && ./tempans" + " "+ str(n)
     os.system(s)
     # f.close()
