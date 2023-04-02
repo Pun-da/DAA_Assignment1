@@ -1,4 +1,7 @@
-﻿To run the program with a randomly generated input with number of vertices  as user input : 
+The project is an implementation and analysis of https://www.sciencedirect.com/science/article/pii/S0377221799000338#:~:text=They%20start%20with%20the%20whole,last%20polygon%20of%20the%20partition.
+
+
+To run the program with a randomly generated input with number of vertices  as user input : 
 
 >> open the project directory, and then type in the command :
     python generate.py <number_of_vertices>
