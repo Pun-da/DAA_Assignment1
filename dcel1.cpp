@@ -1,13 +1,3 @@
-//       *******************************
-
-//   TEAM DETAILS:
-//   Siddhant Panda 2020A7PS0264H
-//   Archis Sahu 2020A7PS1692H
-//   Raghuvir Singh 2020A7PS2061H
-//   Dev Bansal 2020A7PS2051H
-
-//     **********************************
-
 #include <bits/stdc++.h>
 
 using namespace std;
